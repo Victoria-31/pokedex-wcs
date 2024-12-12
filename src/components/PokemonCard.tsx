@@ -1,8 +1,8 @@
-interface PokemonProps {
+interface pokemon {
   pokemon: { name: string; imgSrc?: string };
 }
 
-export default function PokemonCard({ pokemon }: PokemonProps) {
+export default function PokemonCard({ pokemon }: pokemon) {
   return (
     <figure>
       {pokemon.imgSrc ? (

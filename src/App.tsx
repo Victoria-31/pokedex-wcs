@@ -1,21 +1,13 @@
-import PokemonCard from "./components/PokemonCard";
+import Footer from "./components/footer";
+import PokemonMain from "./components/PokemonsMain";
 import "./App.css";
-
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
 
 export default function App() {
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[0]} />
+      <h1>cc</h1>
+      <PokemonMain />
+      <Footer />
     </div>
   );
 }
