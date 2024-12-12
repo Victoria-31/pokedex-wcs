@@ -53,7 +53,7 @@ export default function PokemonMain() {
           Précédent{" "}
         </button>
       ) : (
-        <p> </p>
+        ""
       )}
 
       {pokemonIndex < pokemonList.length - 1 ? (
@@ -62,14 +62,12 @@ export default function PokemonMain() {
           Suivant{" "}
         </button>
       ) : (
-        <p> </p>
+        ""
       )}
 
       {/* <button onClick={handleClickDecrement} type="button"> Précédent </button> */}
       {/* <button onClick={handleClick} type="button">
-        {" "}
-        Suivant{" "}
-      </button> */}
+        </button> */}
     </>
   );
 }

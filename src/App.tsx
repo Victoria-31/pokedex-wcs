@@ -4,7 +4,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="conteneurMain">
       <h1>Pokedex</h1>
       <PokemonMain />
       <Footer />
