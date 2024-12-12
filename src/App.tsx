@@ -5,7 +5,7 @@ import "./App.css";
 export default function App() {
   return (
     <div>
-      <h1>cc</h1>
+      <h1>Pokedex</h1>
       <PokemonMain />
       <Footer />
     </div>
