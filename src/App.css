@@ -56,3 +56,13 @@ h1 {
 .read-the-docs {
   color: #888;
 }
+
+.pokemonCard {
+  width: 60vw;
+  padding: 2rem;
+  /* background-color: lightgreen; */
+  border-radius: 5px;
+  justify-self: center;
+  box-shadow: 0px 0px 5px rgb(240, 183, 98);
+  font-size: 2.4rem;
+}
