@@ -31,10 +31,6 @@ const pokemonList = [
 export default function PokemonMain() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  // const handleClick = (pokemonName: string) => {
-  //   setPokemonName(pokemonName);
-  // };
-
   return (
     <div>
       <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
