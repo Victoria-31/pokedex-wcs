@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PokemonCard from "./PokemonCard";
 import NavBar from "./NavBar";
+import { useEffect } from "react";
 
 const pokemonList = [
   {
@@ -30,7 +31,9 @@ const pokemonList = [
 
 export default function PokemonMain() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-
+  useEffect(() => {
+    alert("hello pokemon trainer :)");
+  }, []);
   return (
     <div>
       <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />

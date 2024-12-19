@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 
 interface Pokemon {
   name: string;
@@ -11,6 +11,8 @@ interface NavBarProps {
 }
 // let indexP = 0;
 export default function NavBar({ setPokemonIndex, pokemonList }: NavBarProps) {
+  //   const [showMyAlertComponent, setShowMyAlertComponent] = useState(false);
+  // if
   return (
     <>
       <nav>
@@ -18,7 +20,10 @@ export default function NavBar({ setPokemonIndex, pokemonList }: NavBarProps) {
           <button
             key={Pokemon.name}
             type="button"
-            onClick={() => setPokemonIndex(index)}
+            onClick={() => {
+              setPokemonIndex(index);
+              index === 3 ? alert("pika pikachu !!!") : "";
+            }}
           >
             {Pokemon.name}
           </button>
