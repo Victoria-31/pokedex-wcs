@@ -29,41 +29,33 @@ const pokemonList = [
 
 export default function PokemonMain() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  const handleClick = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
-  const handleClickDecrement = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  };
+  // const [pokemonName, setPokemonName] = useState("");
+
+  // const handleClick = () => {
+  //   setPokemonIndex(pokemonIndex + 1);
+  // };
+  // const handleClickDecrement = () => {
+  //   setPokemonIndex(pokemonIndex - 1);
+  // };
   return (
     <>
-      {/* <div>
-        {pokemonList[pokemonIndex].map((pokemon) => (
-          <PokemonCard key={pokemon.name} pokemon={pokemon} />
+      <nav>
+        {pokemonList.map((pokemon, pokemonIndex) => (
+          <button
+            type="button"
+            onClick={() => {
+              setPokemonIndex(pokemonIndex);
+            }}
+            key={pokemon.name}
+          >
+            {" "}
+            {pokemon.name}{" "}
+          </button>
         ))}
-      </div> */}
-
+      </nav>
       <div>
         <PokemonCard key={pokemonIndex} pokemon={pokemonList[pokemonIndex]} />
       </div>
-
-      {pokemonIndex > 0 ? (
-        <button onClick={handleClickDecrement} type="button">
-          {" "}
-          Précédent{" "}
-        </button>
-      ) : (
-        ""
-      )}
-
-      {pokemonIndex < pokemonList.length - 1 ? (
-        <button onClick={handleClick} type="button">
-          {" "}
-          Suivant{" "}
-        </button>
-      ) : (
-        ""
-      )}
 
       {/* <button onClick={handleClickDecrement} type="button"> Précédent </button> */}
       {/* <button onClick={handleClick} type="button">
@@ -71,3 +63,23 @@ export default function PokemonMain() {
     </>
   );
 }
+
+// POKEMON INDEX
+
+// {pokemonIndex > 0 ? (
+//   <button onClick={handleClickDecrement} type="button">
+//     {" "}
+//     Précédent{" "}
+//   </button>
+// ) : (
+//   ""
+// )}
+
+// {pokemonIndex < pokemonList.length - 1 ? (
+//   <button onClick={handleClick} type="button">
+//     {" "}
+//     Suivant{" "}
+//   </button>
+// ) : (
+//   ""
+// )}
