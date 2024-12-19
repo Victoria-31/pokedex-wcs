@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 interface Pokemon {
   name: string;
@@ -14,23 +14,16 @@ export default function NavBar({ setPokemonIndex, pokemonList }: NavBarProps) {
   return (
     <>
       <nav>
-        <button type="button" onClick={setPokemonIndex(index)}>
-          {" "}
-          Précendent
-        </button>
-
-        <button type="button"> Précendent</button>
+        {pokemonList.map((Pokemon, index) => (
+          <button
+            key={Pokemon.name}
+            type="button"
+            onClick={() => setPokemonIndex(index)}
+          >
+            {Pokemon.name}
+          </button>
+        ))}
       </nav>
     </>
   );
 }
-
-// {pokemonList.map((pokemon, index) => (
-//     <button
-//       key={pokemon.name}
-//       type="button"
-//       onClick={() => setPokemonIndex(index)}
-//     >
-//       {pokemon.name}
-//     </button>
-//   ))}
